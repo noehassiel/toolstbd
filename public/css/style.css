@@ -1,0 +1,152 @@
+/*TYPOGRAPHY*/
+@font-face {
+    font-family: 'TTCommons';
+    src: url('../fonts/TTCommons-Black.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTCommons';
+    src: url('../fonts/TTCommons-Bold.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTCommons';
+    src: url('../fonts/TTCommons-DemiBold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTCommons';
+    src: url('../fonts/TTCommons-ExtraBold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTCommons';
+    src: url('../fonts/TTCommons-Medium.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTCommons';
+    src: url('../fonts/TTCommons-Regular.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTCommons';
+    src: url('../fonts/TTCommons-Light.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTCommons';
+    src: url('../fonts/TTCommons-Thin.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTCommons';
+    src: url('../fonts/TTCommons-ExtraLight.ttf');
+    font-weight:lighter;
+    font-style: normal;
+}
+
+/*COLORS*/
+:root {
+    --black:
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: 'TTCommons';
+}
+
+
+/*BANNER*/
+.mainBanner{
+    height: 1042px;
+}
+
+.mainBanner .bannerTitle{
+    color: white;
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+    text-align: center;
+    line-height: 3em;
+    z-index: 10;
+}
+.title {
+    font-family: "Six Caps", sans-serif;
+    font-size: 10rem;
+    line-height: 10.5rem;
+    pointer-events: none;
+    position: relative;
+}
+
+.title .title-2,
+.title .title-3 {
+    position: relative;
+    z-index: 2;
+}
+
+.letter {
+    display: inline-block;
+    line-height: 1em;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transform: translateY(-50px);
+}
+
+.mainBanner .bannerImage{
+    overflow: hidden;
+}
+
+.mainBanner img{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: 1s ease-in-out;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.add-margin-bottom-x2 {
+    margin-bottom: calc(50px*2) !important;
+}
+
+@media only screen and (max-width: 960px){
+    .add-margin-bottom-x2 {
+        margin-bottom: calc(40px*2) !important;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .mainBanner img {
+        width: auto;
+        margin-left: -35%;
+    }
+}
+
+@media only screen and (max-width: 578px){
+    .mainBanner{
+        height: 885.7px;
+    }
+    .add-margin-bottom-x2 {
+        margin-bottom: calc(25px*2) !important;
+    }
+}

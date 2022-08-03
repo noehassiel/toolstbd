@@ -1,40 +1,47 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+@push('seo')
 
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/tbd.css') }}">
-        <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
-        </style>
-    </head>
-    <body>
-<!-- Canvas -->
-        <canvas class="orb-canvas"></canvas>
+@endpush
 
-<!-- hero -->
-        <div class="hero">
-            <h1>Tools to be <button class="overlay__btn overlay__btn--colors"><span class="text-gradient">different</span></button></h1>
-            <div class="scroll-downs">
-            <div class="mousey">
-                <div class="scroller"></div>
-            </div>
-            </div>
+@push('stylesheets')
+
+@endpush
+
+@section('content')
+
+<section class="mainBanner add-margin-bottom-x2 position-relative">
+
+    <div class="bannerTitle">
+        <div class="title">
+            <div class="title-1">somos</div>
+            <div class="title-2">diferentes</div>
         </div>
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/main.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    </div>
+
+    <div class="bannerImage position-absolute w-100 h-100" >
+        <img src="{{ asset('img/banner.jpg') }}" alt="">
+    </div>
+</section>
+
+@endsection
+
+@push('scripts')
+
 <script>
-        new kursor({
-            type: 4,
-            removeDefaultCursor: true,
-        })
-    </script>
-    </body>
-</html>
+        let textWrapper = document.querySelector('.title-1')
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        let textWrapper2 = document.querySelector('.title-2')
+        textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+
+        let tl = gsap.timeline();
+
+        tl.to('.title-1 .letter', {opacity: 1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', stagger: '.03'})
+        tl.to('.title-2 .letter', {opacity: 1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',stagger: '.03'}, "-=.7")
+
+</script>
+
+@endpush
