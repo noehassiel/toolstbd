@@ -62,9 +62,14 @@
     font-style: normal;
 }
 
+
 /*COLORS*/
 :root {
-    --black:
+    --black: #000;
+}
+
+body {
+    background: var(--black) !important;
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -90,8 +95,7 @@ h1,h2,h3,h4,h5,h6,p{
     z-index: 10;
 }
 .title {
-    font-family: "Six Caps", sans-serif;
-    font-size: 10rem;
+    font-size: 10vw;
     line-height: 10.5rem;
     pointer-events: none;
     position: relative;
@@ -148,5 +152,10 @@ h1,h2,h3,h4,h5,h6,p{
     }
     .add-margin-bottom-x2 {
         margin-bottom: calc(25px*2) !important;
+    }
+
+    .title {
+        font-size: 19vw;
+        line-height: 7.5rem;
     }
 }

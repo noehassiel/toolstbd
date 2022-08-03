@@ -15,8 +15,8 @@
 
     <div class="bannerTitle">
         <div class="title">
-            <div class="title-1">somos</div>
-            <div class="title-2">diferentes</div>
+            <div class="title-1">we are</div>
+            <div class="title-2">different</div>
         </div>
     </div>
 
@@ -39,7 +39,7 @@
 
         let tl = gsap.timeline();
 
-        tl.to('.title-1 .letter', {opacity: 1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', stagger: '.03'})
+        tl.to('.title-1 .letter', {opacity: 1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', stagger: '.1'})
         tl.to('.title-2 .letter', {opacity: 1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',stagger: '.03'}, "-=.7")
 
 </script>
