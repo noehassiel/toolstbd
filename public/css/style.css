@@ -94,6 +94,13 @@ h1,h2,h3,h4,h5,h6,p{
     line-height: 3em;
     z-index: 10;
 }
+
+@media (max-width:120em) {
+    .mainBanner .bannerTitle{
+        top: 40%;
+    }
+}
+
 .title {
     font-size: 10vw;
     line-height: 10.5rem;
