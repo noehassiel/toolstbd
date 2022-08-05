@@ -65,16 +65,99 @@
 
 /*COLORS*/
 :root {
-    --black: #000;
+    --black: #2b2d2d;
+
 }
 
 body {
-    background: var(--black) !important;
+    background: var(--black);
+}
+
+main{
+    position: relative;
+    z-index: 1;
+}
+
+
+main::after{
+    width: 300%;
+    height: 300%;
+    left: -50%;
+    content: "";
+    opacity: 0.6;
+    position: fixed;
+    top: -100%;
+    z-index: 0;
+    background-image:url('../img/noise.png');
+    visibility: visible;
+    animation: grain 8s steps(10) infinite;
+}
+
+
+@keyframes grain {
+
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+
+    10% {
+        transform: translate(-5%, -10%)
+    }
+
+    20% {
+        transform: translate(-15%, 5%)
+    }
+
+    30% {
+        transform: translate(7%, -25%)
+    }
+
+    40% {
+        transform: translate(-5%, 25%)
+    }
+
+    50% {
+        transform: translate(-15%, 10%)
+    }
+
+    60% {
+        transform: translate(15%, 0%)
+    }
+
+    70% {
+        transform: translate(0%, 15%)
+    }
+
+    80% {
+        transform: translate(3%, 35%)
+    }
+
+    90% {
+        transform: translate(-10%, 10%)
+    }
 }
 
 h1,h2,h3,h4,h5,h6,p{
     font-family: 'TTCommons';
 }
+
+/*NAVBAR*/
+nav{
+    width: 120px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border-right: solid 2px white;
+    z-index: 99999;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+}
+
 
 
 /*BANNER*/

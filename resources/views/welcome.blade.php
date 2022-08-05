@@ -25,7 +25,7 @@
     </div>
 </section>
 
-<section>
+<section style="height: 90vh;" class="d-flex justify-content-center align-items-center">
 
 </section>
 
